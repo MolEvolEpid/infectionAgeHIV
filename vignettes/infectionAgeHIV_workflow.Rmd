@@ -3,8 +3,8 @@ title: "infectionAgeHIV Workflow"
 author: "Erik Lundgren"
 date: "July 2023"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
   
 ```{r setup, include=FALSE}
@@ -20,13 +20,22 @@ knitr::opts_chunk$set(echo = TRUE)
 - format patient data into two data frames: one for data where there is one value per patient and one where there may be multiple
 - use `find.infection.ages` to determine which biomarker values are usable in the multiple biomarker model and find infection age distributions
 
-## Load package and example data set pRNG seed
+## Load package and example data and set pRNG seed
 
-```{r packages}
+```{r load}
 library(infectionAgeHIV)
 df.single <- df.single.example
 df.multiple <- df.multiple.example
 set.seed(12345)
+```
+
+## Show format of example data
+```{r }
+#truncate sequences to be able to be displayed on page
+df.multiple.substr <- df.multiple.example
+df.multiple.substr$value[c(3,7,9,11)] <- paste0(substr(df.multiple.substr$value[c(3,7,9,11)], 1, 30), "...")
+knitr::kable(df.single.example)
+knitr::kable(df.multiple.substr)
 ```
 
 ## Using biomarker data to predict infection times
