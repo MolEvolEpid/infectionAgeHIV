@@ -1,0 +1,32 @@
+Package: infectionAgeHIV
+Type: Package
+Title: Estimates infection age based on biomarker data
+Version: 0.1.0
+Date: 2023-07-14
+Authors@R: c(person("Erik", "Lundgren", 
+    email = "elundgren@lanl.gov", role = c("aut", "cre")))
+Description: Estimates amount of time between infection and diagnosis based on biomarker data
+License: 
+LazyData: TRUE
+Depends:
+    R(>= 3.5.0)
+Imports:
+    Rcpp (>= 0.12.1),
+    methods,
+    stats,
+    stringr,
+    utils,
+    rjags,
+    mvtnorm,
+    ggplot2,
+    ggtext,
+    reshape2,
+    phyclust,
+    coda,
+    gridBase
+Suggests:
+    testthat,
+    knitr,
+    rmarkdown
+RoxygenNote: 7.2.3
+VignetteBuilder: knitr
