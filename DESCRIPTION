@@ -6,7 +6,7 @@ Date: 2023-07-14
 Authors@R: c(person("Erik", "Lundgren", 
     email = "elundgren@lanl.gov", role = c("aut", "cre")))
 Description: Estimates amount of time between infection and diagnosis based on biomarker data
-License: 
+License: GPL (>= 3)
 LazyData: TRUE
 Depends:
     R(>= 3.5.0)
